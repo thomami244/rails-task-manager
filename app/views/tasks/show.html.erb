@@ -1,4 +1,11 @@
 <h1> <%= @task.title %> </h1>
-<p> <%= @task.details %> </p>
-<%= @task.completed? ? "This is task is not completed yet": "This task is completed" %>
-<a href="/">Back to list</a>
+<div class = container style = "display:flex; align-items: center">
+
+    <div style= "display:flex; justify-content: flex-end"> <button type="button">Edit task</button> </div>
+    <div style= "display:flex; justify-content: flex-start">
+        <p> <%= @task.details %> </p>
+        <%= @task.completed? ? "This is task is not completed yet": "This task is completed" %>
+        <a href="/">Back to list</a>
+    </div>
+
+</div>
